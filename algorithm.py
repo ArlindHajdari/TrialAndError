@@ -1,6 +1,6 @@
 import random
 
-MAX_ITERATIONS = 500
+MAX_ITERATIONS = 50000
 
 class TrialAndError:
     def __init__(self, domain):
@@ -21,6 +21,7 @@ class TrialAndError:
         global MAX_ITERATIONS
 
         global_result = 1000
+        global_solution = []
         iteration_normalizer = 0
 
         while iteration_normalizer < MAX_ITERATIONS:
@@ -36,9 +37,10 @@ class TrialAndError:
 
             if result_per_solution < global_result:
                 global_result = result_per_solution
+                global_solution = solution
             else:
                 iteration_normalizer += 1
 
-        return global_result
+        return (global_result, global_solution)
 
 

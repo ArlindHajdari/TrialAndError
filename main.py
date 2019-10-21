@@ -11,6 +11,5 @@ def main():
 
     print(algorithm.commit())
 
-
 if __name__ == "__main__":
     main()
