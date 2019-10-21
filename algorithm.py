@@ -21,7 +21,7 @@ class TrialAndError:
         global MAX_ITERATIONS
 
         global_result = 1000
-        iteration_normalizer = 0;
+        iteration_normalizer = 0
 
         while iteration_normalizer < MAX_ITERATIONS:
             solution = self.randomSolution()
